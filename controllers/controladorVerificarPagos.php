@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['idPago'], $_POST['acc
         error_log("Enviando acuse a: " . $datos['email']);
         enviarAcuse($idPago, $datos['email'], $datos['nombre'], $datos['concepto'], $datos['monto'], $datos['recargo']);
         $_SESSION['mensaje'] = "El pago con ID $idPago fue verificado y se envió el acuse.";
-        header("Location: verificarPagos.php");
+        header("Location: verificar_Pagos.php");
         exit();
     } elseif ($accion === 'rechazar' && PagoModel::rechazarPago($idPago)) {
         error_log("Enviando acuse de rechazo a: " . $datos['email']);
