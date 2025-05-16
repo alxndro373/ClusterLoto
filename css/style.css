@@ -1,0 +1,254 @@
+:root {
+  --color-fondo-base: #fcf4f4;
+  --color-primario: #412855;
+  --color-secundario: #d9c8e2;
+  --color-neutro: #f5f5f5;
+  --color-texto: #2d2d2d;
+  --color-invertido: #ffffff;
+  --color-exito: #89c9a2;
+  --color-advertencia: #f2c94c;
+  --color-error: #e57373;
+}
+
+body {
+  background-color: var(--color-fondo-base);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* clases a reutilizar */
+.bg-primario {
+  background-color: var(--color-primario) !important;
+}
+
+.bg-secundario {
+  background-color: var(--color-secundario) !important;
+}
+
+.bg-fondo {
+  background-color: var(--color-fondo-base) !important;
+}
+
+.texto-principal {
+  color: var(--color-texto);
+}
+
+.texto-invertido {
+  color: var(--color-invertido);
+}
+
+.texto-white {
+  color: var(--color-invertido);
+}
+
+.texto-subtitulo {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* navbar */
+.navbar-custom {
+  background-color: var(--color-primario);
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: var(--color-invertido) !important;
+}
+
+.navbar-custom .nav-link:hover {
+  text-decoration: underline;
+  color: var(--color-neutro) !important;
+}
+
+/* footer */
+.footer-custom {
+  background-color: var(--color-primario);
+  color: var(--color-invertido);
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-custom a {
+  color: var(--color-invertido);
+  text-decoration: none;
+}
+
+.footer-custom a:hover {
+  text-decoration: underline;
+  color: var(--color-neutro);
+}
+
+.footer-custom hr {
+  border-top: 1px solid var(--color-invertido);
+}
+
+/* tarjetas del panel */
+.card {
+  background-color: var(--color-secundario);
+  border: none;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card.bg-secundario {
+  background-color: var(--color-secundario);
+  border: none;
+  color: var(--color-texto);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.bg-secundario:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* botones */
+.btn-primario {
+  background-color: var(--color-primario);
+  color: var(--color-invertido);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primario:hover {
+  background-color: #341e44;
+  transform: scale(1.03);
+  color: var(--color-invertido);
+}
+
+.btn-outline-primary {
+  color: var(--color-primario);
+  border-color: var(--color-primario);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  color: var(--color-invertido);
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+/* contenedores */
+.container {
+  padding: 2rem;
+}
+
+/* formulario */
+.form-label {
+  font-weight: 600;
+  color: var(--color-primario);
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 0.75rem;
+  border: 1px solid var(--color-neutro);
+}
+
+.form-control:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 0.25rem rgba(65, 40, 85, 0.25);
+}
+
+/* alertas */
+.alert {
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.alert-info {
+  background-color: var(--color-exito);
+  color: var(--color-invertido);
+  border-left: 5px solid var(--color-exito);
+}
+
+.alert-info a {
+  color: var(--color-invertido);
+  text-decoration: underline;
+}
+
+.alert-info a:hover {
+  color: var(--color-neutro);
+}
+
+@media (max-width: 990.98px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* tablas */
+  .estado-cuenta-table th,
+  .estado-cuenta-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  /* formularios */
+  .formulario-periodo {
+    padding: 1rem;
+  }
+
+  .formulario-periodo label {
+    font-size: 14px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 14px;
+    padding: 0.6rem;
+  }
+
+  /* botones */
+  .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* navbar */
+  .navbar-brand img {
+    max-height: 35px;
+  }
+
+  .navbar-text {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar .nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* titulos y textos */
+  h1 {
+    font-size: 24px;
+  }
+
+  p.lead {
+    font-size: 16px;
+  }
+
+  /* Imágenes */
+  img.img-fluid {
+    margin-top: 1rem;
+  }
+}
